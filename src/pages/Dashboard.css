@@ -1,0 +1,107 @@
+.dashboard {
+    padding-top: var(--space-md);
+}
+
+.dashboard__section {
+    margin-bottom: var(--space-3xl);
+}
+
+.dashboard__section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-lg);
+}
+
+.dashboard__section-title {
+    font-size: var(--fs-2xl);
+    font-weight: 700;
+}
+
+.dashboard__section-link {
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    color: var(--color-accent-light);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.dashboard__section-link:hover {
+    text-decoration: underline;
+}
+
+/* News grid */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-lg);
+}
+
+/* Error state */
+.error-banner {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-lg) var(--space-xl);
+    border-radius: var(--radius-md);
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    color: #fca5a5;
+    font-size: var(--fs-sm);
+}
+
+.error-banner__icon {
+    font-size: var(--fs-xl);
+    flex-shrink: 0;
+}
+
+.error-banner__retry {
+    margin-left: auto;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-sm);
+    background: rgba(239, 68, 68, 0.2);
+    color: #fca5a5;
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    transition: background var(--transition-fast);
+}
+
+.error-banner__retry:hover {
+    background: rgba(239, 68, 68, 0.3);
+}
+
+/* Empty state */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-3xl);
+    text-align: center;
+    color: var(--color-text-muted);
+}
+
+.empty-state__icon {
+    font-size: 4rem;
+    margin-bottom: var(--space-lg);
+    opacity: 0.4;
+}
+
+.empty-state__title {
+    font-size: var(--fs-xl);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+    color: var(--color-text-secondary);
+}
+
+.empty-state__text {
+    font-size: var(--fs-sm);
+    max-width: 400px;
+}
+
+@media (max-width: 640px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}

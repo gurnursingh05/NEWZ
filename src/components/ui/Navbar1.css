@@ -1,0 +1,268 @@
+/* =============================================
+   Navbar1 – Floating Pill Navbar
+   ============================================= */
+
+.navbar1-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    padding: var(--space-md) var(--space-md);
+    pointer-events: none;
+}
+
+.navbar1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--space-lg);
+    height: 56px;
+    width: 100%;
+    max-width: 820px;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow:
+        0 2px 16px rgba(0, 0, 0, 0.06),
+        0 1px 4px rgba(0, 0, 0, 0.04);
+    pointer-events: all;
+    transition: background var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+[data-theme="dark"] .navbar1 {
+    background: rgba(15, 23, 42, 0.85);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow:
+        0 2px 16px rgba(0, 0, 0, 0.3),
+        0 0 24px rgba(19, 91, 236, 0.08);
+}
+
+/* Brand */
+.navbar1__left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar1__brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar1__logo-img {
+    height: 28px;
+    width: auto;
+    transition: filter var(--transition-fast);
+}
+
+[data-theme="dark"] .navbar1__logo-img {
+    filter: invert(1);
+}
+
+/* Desktop Nav */
+.navbar1__nav {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.navbar1__link {
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    font-family: var(--font-body);
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+}
+
+.navbar1__link:hover {
+    color: var(--color-text-primary);
+    background: rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="dark"] .navbar1__link:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.navbar1__link.active {
+    color: var(--color-accent);
+    background: rgba(37, 99, 235, 0.08);
+    font-weight: 600;
+}
+
+[data-theme="dark"] .navbar1__link.active {
+    background: rgba(59, 130, 246, 0.12);
+}
+
+/* Actions */
+.navbar1__actions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.navbar1__action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-full);
+    color: var(--color-text-secondary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.navbar1__action-btn:hover {
+    color: var(--color-text-primary);
+    background: rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="dark"] .navbar1__action-btn:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+/* Hamburger (mobile only) */
+.navbar1__hamburger {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-full);
+    color: var(--color-text-primary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Mobile Overlay */
+.navbar1__mobile-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    padding: 5rem var(--space-xl) var(--space-xl);
+    background: var(--color-bg-primary);
+}
+
+.navbar1__mobile-close {
+    position: absolute;
+    top: var(--space-lg);
+    right: var(--space-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-full);
+    color: var(--color-text-primary);
+    background: var(--color-bg-surface);
+    border: var(--glass-border);
+    cursor: pointer;
+    transition: background var(--transition-fast);
+}
+
+.navbar1__mobile-close:hover {
+    background: var(--color-bg-surface-hover);
+}
+
+.navbar1__mobile-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.navbar1__mobile-link {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: var(--space-md) var(--space-lg);
+    border-radius: var(--radius-md);
+    font-family: var(--font-heading);
+    font-size: var(--fs-lg);
+    font-weight: 500;
+    color: var(--color-text-primary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background var(--transition-fast);
+}
+
+.navbar1__mobile-link:hover,
+.navbar1__mobile-link.active {
+    background: var(--color-bg-surface);
+}
+
+.navbar1__mobile-link.active {
+    color: var(--color-accent);
+}
+
+.navbar1__mobile-cta-wrap {
+    padding-top: var(--space-lg);
+    border-top: var(--glass-border);
+    margin-top: var(--space-md);
+}
+
+.navbar1__mobile-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: var(--space-md) var(--space-xl);
+    border-radius: var(--radius-full);
+    font-family: var(--font-heading);
+    font-size: var(--fs-base);
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, var(--color-accent), #6366f1);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px var(--color-accent-glow);
+    transition: all var(--transition-fast);
+}
+
+.navbar1__mobile-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 24px var(--color-accent-glow);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar1-wrap {
+        padding: var(--space-sm) var(--space-sm);
+    }
+
+    .navbar1 {
+        height: 50px;
+        padding: 0 var(--space-md);
+    }
+
+    .navbar1__nav {
+        display: none;
+    }
+
+    .navbar1__action-btn:not(:last-child) {
+        display: none;
+    }
+
+    .navbar1__hamburger {
+        display: flex;
+    }
+}
+
+@media (min-width: 769px) {
+    .navbar1__hamburger {
+        display: none;
+    }
+}

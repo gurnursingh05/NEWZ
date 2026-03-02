@@ -1,0 +1,20 @@
+.category-page {
+    padding-top: calc(var(--navbar-height) + var(--space-2xl));
+    min-height: 100vh;
+}
+
+.category-page__header {
+    margin-bottom: var(--space-xl);
+}
+
+.category-page__title {
+    font-size: var(--fs-3xl);
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: var(--space-sm);
+}
+
+.category-page__subtitle {
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+}
