@@ -1,8 +1,8 @@
-# NEWZ – Smart News Aggregator 📰✨
+# NEWZ – Smart News Aggregator 
 
 A premium React-based web application that aggregates real-time news from over 80,000 sources worldwide. Built with modern web development practices, it offers a sleek, user-friendly interface to quickly browse, search, and bookmark top headlines.
 
-## ✨ Features
+## Features
 
 - **Real-Time Global News:** Fetches the latest headlines using the [GNews.io API](https://gnews.io/).
 - **Category Browsing:** Quickly filter news by General, World, Nation, Business, Technology, Entertainment, Sports, Science, and Health.
@@ -15,7 +15,7 @@ A premium React-based web application that aggregates real-time news from over 8
 - **Dark/Light Mode:** Full theming support with persistent user preferences, featuring a clean white default and a deep dark override.
 - **Responsive Design:** Fully optimized for mobile, tablet, and desktop viewing.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend:** React (JSX), Vite
 - **Styling:** Vanilla CSS (CSS Variables, custom design system), minimal Tailwind
@@ -25,8 +25,7 @@ A premium React-based web application that aggregates real-time news from over 8
 - **Data Fetching:** Native `fetch` API, Custom Hooks (`useFetch`)
 - **State Management:** React Context API (`ThemeContext`, `BookmarkContext`), LocalStorage
 
-## 🚀 Getting Started
-
+## Getting Started
 ### Prerequisites
 Make sure you have [Node.js](https://nodejs.org/) installed.
 
@@ -55,7 +54,7 @@ Make sure you have [Node.js](https://nodejs.org/) installed.
    ```
    Open `http://localhost:5175` to view it in your browser.
 
-## 💡 Architecture
+## Architecture
 
 - `src/components/ui/` - Contains core reusable UI components like the `Navbar1` and `Particles` background.
 - `src/pages/` - Contains the main views: `Dashboard`, `Search`, `ArticleDetail`, `Category`, and `Bookmarks`.
